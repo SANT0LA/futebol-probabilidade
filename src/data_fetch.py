@@ -1,6 +1,10 @@
+from dotenv import load_dotenv
+import os
 import requests
 
-API_KEY = "74f776e5e2007b289dc3c831e30df76c"
+load_dotenv()
+
+API_KEY = os.getenv("API_KEY")
 
 def get_jogos_brasileirao():
     url = "https://v3.football.api-sports.io/fixtures"
